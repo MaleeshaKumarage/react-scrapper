@@ -8,7 +8,7 @@ var cheerio = require('cheerio');
     return new Promise((resolve, reject)=>{
 
    
- request('https://www.telemart.pk/mobile-and-tablets/accessories/charger.html', function(error, response, html){
+ request('https://www.telemart.pk/computer/laptops.html', function(error, response, html){
     if(!error && response.statusCode==200){
         var $ = cheerio.load(html);
         $('li.col-lg-3', html).each(function(i, element){
