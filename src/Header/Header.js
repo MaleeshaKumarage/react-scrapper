@@ -1,17 +1,21 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import  './bootstrap.svg';
 import './Header.css';
-import {FaSistrix}from 'react-icons/fa';
-import Product from '../Product/Product';
-import card from '../Cards/card';
-import Category from '../Category/Category';
-import Brands from '../Brands/Brands';
+// import {FaSistrix}from 'react-icons/fa';
+// import Product from '../Product/Product';
+// import card from '../Cards/card';
+// import Category from '../Category/Category';
+import Mobiles from '../Mobiles/Mobiles';
+import Brands from '../../src/Brands/Brands';
+import Shops from '../Shops/Shops';
+import Home from '../../src/Home/Home';
 
-class Header extends React.Component {
+
+class Header extends Component {
   render() {
     return (
-      <Router>
+      
       <div >
         <div class ="container">
       <div class="row">
@@ -27,13 +31,13 @@ class Header extends React.Component {
         <div class="col-6">
         <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link9" href="#">Contact us</a>
+    <Link class="nav-link9" to="/contactus">Contact us</Link>
   </li>
   <li class="nav-item">
-    <a class="nav-link9" href="#">Privacy Policy</a>
+    <Link class="nav-link9" to="/privacy">Privacy Policy</Link>
   </li>
   <li class="nav-item">
-    <a class="nav-link9" href="#">Terms and condition</a>
+    <Link class="nav-link9" to="/terms">Terms and condition</Link>
   </li>
   
 </ul>
@@ -48,19 +52,19 @@ class Header extends React.Component {
     <Link class="nav-link " to="/">Home</Link>
   </li>
   <li class="nav-item">
-    <Link class="nav-link" to="/Category/Category">Mobiles</Link>
+    <Link class="nav-link" to="/mobiles">Mobiles</Link>
   </li>
   <li class="nav-item">
-    <Link class="nav-link" to="/Category/Category">Laptops</Link>
+    <Link class="nav-link" to="/laptops">Laptops</Link>
   </li>
   <li class="nav-item">
-    <Link class="nav-link " to="/Category/Category">Accessories</Link>
+    <Link class="nav-link " to="/accessories">Accessories</Link>
   </li>
   <li class="nav-item">
-    <Link class="nav-link " to="Brands/Brands">Brands</Link>
+    <Link class="nav-link " to="/brands">Brands</Link>
   </li>
   <li class="nav-item">
-    <Link class="nav-link " to="#">Shops</Link>
+    <Link class="nav-link " to="/shops">Shops</Link>
   </li></ul>
      <div class="form">
     <input type="text" placeholder="Search" />
@@ -71,12 +75,10 @@ class Header extends React.Component {
         </div>
         
       </div>
-      <Route exact path="/" component={card} />
-      <Route  path="/Category/Category" component={Category} />
-      <Route  path="/Brands/Brands" component={Brands} />
+  
 
     </div>
-    </Router>
+  
     )
   }
 }

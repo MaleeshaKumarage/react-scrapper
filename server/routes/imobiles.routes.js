@@ -1,11 +1,13 @@
 var express = require('express');
-var cors = require('cors')
-
+var cors = require('cors');
 var router =express.Router();
 
-const Telemart = require('../scraper/tmmobiles.scrap');
-router.get('/', cors(), async function(req, res){
-   var items = await Telemart.mobiles().then(result =>{
+
+
+
+const iShopping = require('../scraper/imobiles.scrap');
+router.get('/',cors(), async function(req, res){
+   var items = await iShopping.imobiles().then(result =>{
         return result;
 
          

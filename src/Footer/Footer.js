@@ -67,7 +67,7 @@ class Footer extends Component {
      <td><a href="#" >Secondary</a></td>
     </tr>
     <tr>
-      <td><a href="#" >econdary</a></td>
+      <td><a href="#" >Secondary</a></td>
     </tr>
   </tbody>
 </table>
@@ -87,7 +87,7 @@ class Footer extends Component {
      <td><a href="#" >Secondary</a></td>
     </tr>
     <tr>
-      <td><a href="#" >econdary</a></td>
+      <td><a href="#" >Secondary</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,28 +1,15 @@
-import React from 'react';
+import React , { Component } from 'react';
 
-import axios from 'axios';
 
-export default class Shops extends React.Component {
-  state = {
-    title: []
-  }
 
-  componentDidMount() {
-    axios.get(`http://localhost:3000/api/tmaccessories`,{
-     
-    })
-      .then(res => {
-        console.log(res);
-        this.setState({ title:res.data });
-      })
-      .catch(error => console.log(error))
-  }
+class Shops extends Component {
+  render(){
+    return(
+       <div>
+         <h2>Shops Component</h2>
+       </div>
 
-  render() {
-    return (
-      <ul>
-        { this.state.title.map(title => <li>{title.title}</li>)}
-      </ul>
     )
   }
 }
+export default Shops;
